@@ -5,6 +5,7 @@ const cron = require('node-cron');
 const db = require('./db');
 
 const app = express();
+app.use(require("express").static(require("path").join(__dirname, "public")));
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
